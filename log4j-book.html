@@ -7,17 +7,17 @@
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <link rel="canonical" href="https://akashpatil.me/log4j-book.html">
     <meta property="og:url" content="https://akashpatil.me/log4j-book.html"/>
-    <meta property="og:title" content="Bug Bounty Note Keeping Tools"/>
-    <meta property="og:description" content="Bug Bounty Note Keeping Tools."/>
+    <meta property="og:title" content="CVE-2021-44228 - Log4J Start to End Guide Books"/>
+    <meta property="og:description" content="CVE-2021-44228 - Log4J Start to End Guide Book."/>
     <meta property="og:site_name" content="akashpatil.me"/>
-    <meta property="og:image" content="https://www.bleepstatic.com/content/posts/2021/12/10/Mineecraft_Log4j.jpg"/>
-    <meta property="og:image:secure_url" content="https://www.bleepstatic.com/content/posts/2021/12/10/Mineecraft_Log4j.jpg">
-    <meta property="og:image:alt" content="bugbountytools">
+    <meta property="og:image" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg"/>
+    <meta property="og:image:secure_url" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg">
+    <meta property="og:image:alt" content="CVE-2021-44228">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bug Bounty Note Keeping tools - akashpatil.me">                                                                                                                            
-    <meta name="twitter:description" content="Bug Bounty Note Keeping tools">
+    <meta name="twitter:title" content="CVE-2021-44228 - Log4J Start to End Guide Book - akashpatil.me">                                                                                                                            
+    <meta name="twitter:description" content="CVE-2021-44228 - Log4J Start to End Guide Books">
     <meta name="twitter:site" content="@skypatil98">     
-    <meta name="twitter:image" content="https://www.bleepstatic.com/content/posts/2021/12/10/Mineecraft_Log4j.jpg">
+    <meta name="twitter:image" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg">
                                                    
     <link rel="icon" type="image/x-icon" href="img/favi.png">
     <!-- Template Google Fonts -->
@@ -174,10 +174,10 @@
                 </div>
                 <!-- Meta Ends -->
                 <!-- Article Content Starts -->
-                <h1 class="text-uppercase text-capitalize">Log4J Start to End Guide</h1>
+                <h1 class="text-uppercase text-capitalize">CVE-2021-44228 - Log4J Start to End Guide Book</h1>
                 <img src="img/blog/LOG4J.jpg" class="img-fluid" alt="Blog image"/>
                 <div class="blog-excerpt open-sans-font pb-5">
-                    <h2>##Introduction</h2>
+                    <h2>#Introduction</h2>
                     <p>The Log4J vulnerability is triggered by attackers inserting a JNDI lookup in a header field (likely to be logged) linking to a malicious server. After Log4j logs this string, the server is queried and gives directory information leading to the download and execution of a malicious java data class
                     Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. Affected versions are 2.0 <= Apache log4j <= 2.14.1
                     </p>
