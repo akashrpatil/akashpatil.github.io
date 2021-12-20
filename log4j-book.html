@@ -204,10 +204,9 @@
 4. The ldap server responds with directory information that contains the malicious java class.<br>
 5. Java deserializes or download the malicious java class and execute it.<br>
                     </p>
-                    
+               
 <h2>Payloads</h2>
-<pre><code>
-${env:JAVA_VERSION}
+<pre><code>${env:JAVA_VERSION}
 ${sys:java.version}
 ${hostName}
 ${sys:java.vendor}
