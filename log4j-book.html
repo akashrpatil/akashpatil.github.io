@@ -183,7 +183,7 @@
                     <p>The Log4J vulnerability is triggered by attackers inserting a JNDI lookup in a header field (likely to be logged) linking to a malicious server. After Log4j logs this string, the server is queried and gives directory information leading to the download and execution of a malicious java data class
                     Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. Affected versions are 2.0 <= Apache log4j <= 2.14.1
                     </p>
-                        <img src="img/blog/jndi-attack.jpeg" class="img-fluid" alt="JNDI-ATTACK"/>
+                        <img src="img/blog/logj mindamap.jpeg" class="img-fluid" alt="JNDI-ATTACK"/>
                     <p>
                       LOG4SHELL is a Remote Code Execution vulnerability in the Apache Log4j library, a Java-based logging tool widely used in applications around the world. This vulnerability allows an attacker who can control log messages to execute arbitrary code loaded from attacker-controlled servers — and we anticipate that most apps using the Log4j library will meet this condition.
                     </p>
