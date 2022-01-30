@@ -398,7 +398,7 @@ body.light hr.separator {
 
   .header.hide-header {
     z-index: 0 !important;
-    opacity: 0;
+    opacity: 1;
   }
 
   .header ul.icon-menu {
