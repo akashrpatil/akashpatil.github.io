@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Blog - Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Template Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
+
+    <!-- Template CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/preloader.min.css" rel="stylesheet">
+    <link href="css/circle.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- CSS Skin File -->
+    <link href="css/skins/yellow.css" rel="stylesheet">
+
+    <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
+    <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css" />
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="css/skins/blueviolet.css" />
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="css/skins/goldenrod.css" />
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="css/skins/magenta.css" />
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="css/skins/orange.css" />
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="css/skins/purple.css" />
+    <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css" />
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
+    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
+
+    <!-- Modernizr JS File -->
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="what-is-red-teaming">
+<!-- Live Style Switcher Starts - demo only -->
+<div id="switcher" class="">
+    <div class="content-switcher">
+        <h4>STYLE SWITCHER</h4>
+        <ul>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('purple');" title="purple" class="color"><img src="img/styleswitcher/purple.png" alt="purple"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('red');" title="red" class="color"><img src="img/styleswitcher/red.png" alt="red"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('blueviolet');" title="blueviolet" class="color"><img src="img/styleswitcher/blueviolet.png" alt="blueviolet"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('blue');" title="blue" class="color"><img src="img/styleswitcher/blue.png" alt="blue"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('goldenrod');" title="goldenrod" class="color"><img src="img/styleswitcher/goldenrod.png" alt="goldenrod"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('magenta');" title="magenta" class="color"><img src="img/styleswitcher/magenta.png" alt="magenta"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('yellowgreen');" title="yellowgreen" class="color"><img src="img/styleswitcher/yellowgreen.png" alt="yellowgreen"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('orange');" title="orange" class="color"><img src="img/styleswitcher/orange.png" alt="orange"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('green');" title="green" class="color"><img src="img/styleswitcher/green.png" alt="green"/></a>
+            </li>
+            <li>
+                <a href="#" onclick="setActiveStyleSheet('yellow');" title="yellow" class="color"><img src="img/styleswitcher/yellow.png" alt="yellow"/></a>
+            </li>
+        </ul>
+
+       <div id="hideSwitcher">&times;</div>
+    </div>
+</div>
+<div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
+<!-- Live Style Switcher Ends - demo only -->
+<!-- Header Starts -->
+<header class="header" id="navbar-collapse-toggle">
+    <!-- Fixed Navigation Starts -->
+    <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
+        <li class="icon-box">
+            <i class="fa fa-home"></i>
+            <a href="index.html">
+                <h2>Home</h2>
+            </a>
+        </li>
+        <li class="icon-box">
+            <i class="fa fa-user"></i>
+            <a href="about.html">
+                <h2>About</h2>
+            </a>
+        </li>
+        <li class="icon-box">
+            <i class="fa fa-briefcase"></i>
+            <a href="portfolio.html">
+                <h2>Portfolio</h2>
+            </a>
+        </li>
+        <li class="icon-box">
+            <i class="fa fa-envelope-open"></i>
+            <a href="contact.html">
+                <h2>Contact</h2>
+            </a>
+        </li>
+        <li class="icon-box active">
+            <i class="fa fa-comments"></i>
+            <a href="blog.html">
+                <h2>Blog</h2>
+            </a>
+        </li>
+    </ul>
+    <!-- Fixed Navigation Ends -->
+    <!-- Mobile Menu Starts -->
+    <nav role="navigation" class="d-block d-lg-none">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="list-unstyled" id="menu">
+                <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
+                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                <li class="active"><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Mobile Menu Ends -->
+</header>
+<!-- Header Ends -->
+<!-- Page Title Starts -->
+<section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+    <h1>my <span>blog</span></h1>
+    <span class="title-bg">posts</span>
+</section>
+<!-- Page Title Ends -->
+<!-- Main Content Starts -->
+<section class="main-content revealator-slideup revealator-once revealator-delay1">
+    <div class="container">
+        <div class="row">
+            <!-- Article Starts -->
+            <article class="col-12">
+                <!-- Meta Starts -->
+                <div class="meta open-sans-font">
+                    <span><i class="fa fa-user"></i> steve</span>
+                    <span class="date"><i class="fa fa-calendar"></i> 11 April 2025</span>
+                    <span><i class="fa fa-tags"></i> Real World Pentesting, Approach, offensive security, red team</span>
+                </div>
+                <!-- Meta Ends -->
+                <!-- Article Content Starts -->
+                <h1 class="text-uppercase text-capitalize">Red Team Assessments: Going Beyond Traditional Security Testing</h1>
+                <img src="img/blog/blog-post-1.jpg" class="img-fluid" alt="Blog image"/>
+                <div class="blog-excerpt open-sans-font pb-5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <p>In the ever-evolving cybersecurity landscape, knowing your vulnerabilities isn't enough—you need to see how they'd hold up against a real-world attacker. That’s where Red Team Assessments come in. These simulations mimic the behavior of actual threat actors, giving organizations a clearer picture of how well their defenses perform under pressure.</p>
+
+  <h2>What Is a Red Team Assessment?</h2>
+  <p>Unlike standard penetration tests that scan for known issues or misconfigurations, a Red Team Assessment takes it further. It’s a controlled, full-scope attack simulation designed to test not just systems, but people, processes, and detection capabilities.</p>
+  <p>As a red teamer, I replicate real-world adversary tactics—whether that’s phishing, exploiting leaked credentials, or attempting physical intrusion—to evaluate how deeply I can penetrate an organization’s environment without detection.</p>
+
+  <h2>How I Approach Red Teaming</h2>
+  <p>My methodology is rooted in realism and customization. Every assessment is tailored to the organization’s unique threat landscape and business context.</p>
+
+  <p>Here’s what a typical engagement looks like:</p>
+
+  <h3>Reconnaissance & Attack Surface Mapping</h3>
+  <p>I begin by studying the organization’s digital and physical footprint. This includes identifying exposed assets, cloud misconfigurations, and publicly available employee data that could be leveraged for social engineering.</p>
+
+  <h3>Adversarial Simulation</h3>
+  <p>Using tactics from real-world APT groups, I attempt to gain access through multiple vectors—be it email phishing, credential stuffing, or exploiting overlooked internal systems.</p>
+
+  <h3>Detection & Response Testing</h3>
+  <p>One of the key outcomes is understanding how well your security teams can detect and respond to an active attack scenario. The goal is to test both technology and human response in a realistic timeline.</p>
+
+  <h2>What You Get at the End</h2>
+  <p>Every assessment concludes with a set of deliverables that go beyond just reporting:</p>
+  <ul>
+    <li><strong>Executive Summary</strong> – A high-level overview of findings, ideal for leadership teams.</li>
+    <li><strong>Detailed Technical Report</strong> – In-depth documentation of attack paths, vulnerabilities, and recommended fixes for the reported issues.</li>
+    <li><strong>Security Readiness Score</strong> – A custom metric to help organizations track.</li>
+    <li><strong>Step-by-Step Recommendations</strong> – Prioritized actions for improving overall resilience.</li>
+  </ul>
+
+  <h2>Why Red Teaming Matters</h2>
+  <p>Red Team Assessments are valuable for organizations that want to move from reactive to proactive security. They help answer critical questions like:</p>
+  <ul>
+    <li>How easy is it for an attacker to breach your defenses?</li>
+    <li>Would your team catch them in time?</li>
+    <li>What blind spots exist in your monitoring or response processes?</li>
+  </ul>
+
+  <h2>Real Results, Real Insights</h2>
+  <p>Clients I’ve worked with have used Red Team insights to drive significant improvements in their security posture—whether it's tightening access controls, hardening cloud deployments, or improving SOC alerting.</p>
+
+  <blockquote>
+    “This wasn’t just another pen test. It felt like a true test of our organization’s resilience, and the takeaways helped us rethink how we train and respond as a team.”
+  </blockquote>
+
+  <h2>Red Team Options</h2>
+  <p>Depending on the scope and objectives, assessments can focus on:</p>
+  <ul>
+    <li><strong>External Attacks</strong> – Simulating threats from outside the network.</li>
+    <li><strong>Internal Breaches</strong> – Assuming an attacker already has internal access.</li>
+    <li><strong>Hybrid Scenarios</strong> – Combining both to simulate complex, multi-stage attacks.</li>
+  </ul>
+
+  <h2>Final Thoughts</h2>
+  <p>Red Teaming isn’t about breaking things—it’s about helping organizations build smarter, more resilient defenses. If you're serious about testing your security from an attacker’s perspective, a Red Team Assessment is one of the most valuable investments you can make.</p>
+<div class="contact-section">
+  <h3>📩 Get in Touch for Freelance Red Teaming</h3>
+  <p>Interested in hiring me for a Red Team Assessment or consulting project? I'd love to hear from you!</p>
+  <p>
+    📧 Email: <a href="mailto:contact@akashpatil.me">akshpatil98@gmail.com</a><br>
+    🌐 Portfolio: <a href="https://akashpatil.me" target="_blank">https://akashpatil.me</a><br>
+    💼 LinkedIn: <a href="https://www.linkedin.com/in/akashpatil98/" target="_blank">linkedin.com/in/akashpatil98</a>
+  </p>
+</div>
+                </div>
+                <!-- Article Content Ends -->
+            </article>
+            <!-- Article Ends -->
+        </div>
+    </div>
+</section>
+<!-- Template JS Files -->
+<script src="js/jquery-3.5.0.min.js"></script>
+<script src="js/styleswitcher.js"></script>
+<script src="js/preloader.min.js"></script>
+<script src="js/fm.revealator.jquery.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpGridGallery.js"></script>
+<script src="js/jquery.hoverdir.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+
+
+</html>
